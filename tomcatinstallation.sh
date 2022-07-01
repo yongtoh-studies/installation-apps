@@ -23,4 +23,11 @@ sudo ln -s /opt/tomcat9/bin/startup.sh /usr/bin/starttomcat
 sudo ln -s /opt/tomcat9/bin/shutdown.sh /usr/bin/stoptomcat
 sudo yum update -y
 starttomcat
+# To be able to access Tomcat from another computer, we have to access a file in Tomcat and comment on a line(Tomcat server Configuration). 
+# vi /opt/tomcat10/webapps/manager/META-INF/context.xml
+# <!--
+  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
+-->
+
 
