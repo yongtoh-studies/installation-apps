@@ -30,8 +30,6 @@ starttomcat
          allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
 -->
 # To be able to access tomcat from the gui, you have to create a user in the configurations file as follows
-<!--
--->
 vi /opt/tomcat9/conf/tomcat-users.xml
 # to add user
 <user username="admin" password="admin123" roles="manager-gui,admin-gui, manager-script"/>
